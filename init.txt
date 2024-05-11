@@ -38,6 +38,10 @@ setup mongo database:-
 npm i mongoose
 npm i -D @types/mongoose
 
+setup error handling
+npm i http-errors
+npm i -D @types/http-errors
+
 
 
 
