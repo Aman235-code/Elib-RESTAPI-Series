@@ -28,6 +28,12 @@ setup express server:-
 npm i express
 npm i -D @types/express
 
+install dotenv
+npm i dotenv
+npm i -D @types/dotenv
+
+npm run dev
+
 
 
 
