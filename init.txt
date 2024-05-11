@@ -1,0 +1,10 @@
+Initialize node project
+npm init
+
+setup typescript:-
+npm install -D typescript ts-node nodemon @types/node
+
+initialize tsconfig file
+npx tsc --init
+
+dev:"nodemon server.js"
