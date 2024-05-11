@@ -24,6 +24,10 @@ globals, @eslint/js, typescript-eslint, eslint
 √ Would you like to install them now? · No / Yes
 √ Which package manager do you want to use? · npm
 
+setup express server:-
+npm i express
+npm i -D @types/express
+
 
 
 
