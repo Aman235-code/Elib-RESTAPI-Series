@@ -7,4 +7,5 @@ npm install -D typescript ts-node nodemon @types/node
 initialize tsconfig file
 npx tsc --init
 
-dev:"nodemon server.js"
+add dev script in package.json
+dev:"nodemon server.ts"
