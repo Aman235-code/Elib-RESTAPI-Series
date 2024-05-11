@@ -9,3 +9,34 @@ npx tsc --init
 
 add dev script in package.json
 dev:"nodemon server.ts"
+
+add eslint setup
+npm init @eslint/config@latest
+Ok to proceed? (y) y
+√ How would you like to use ESLint? · problems
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · typescript
+√ Where does your code run? · browser
+The config that you've selected requires the following dependencies:
+
+globals, @eslint/js, typescript-eslint, eslint
+√ Would you like to install them now? · No / Yes
+√ Which package manager do you want to use? · npm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
