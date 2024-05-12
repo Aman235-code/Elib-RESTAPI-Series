@@ -42,6 +42,11 @@ setup error handling
 npm i http-errors
 npm i -D @types/http-errors
 
+install bcrypt for hasing password
+npm i bcrypt
+npm i -D @types/bcrypt
+
+
 
 
 
