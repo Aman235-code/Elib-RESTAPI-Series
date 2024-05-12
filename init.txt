@@ -46,6 +46,11 @@ install bcrypt for hasing password
 npm i bcrypt
 npm i -D @types/bcrypt
 
+install jwt:-
+npm i jsonwebtoken
+npm i -D @types/jsonwebtoken
+
+
 
 
 
