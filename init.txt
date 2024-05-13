@@ -54,6 +54,9 @@ install multer to handle multiple form data
 npm install --save multer
 npm i -D @types/multer
 
+install cloudinary
+npm i cloudinary
+
 
 
 
