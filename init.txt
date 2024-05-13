@@ -50,6 +50,10 @@ install jwt:-
 npm i jsonwebtoken
 npm i -D @types/jsonwebtoken
 
+install multer to handle multiple form data
+npm install --save multer
+npm i -D @types/multer
+
 
 
 
