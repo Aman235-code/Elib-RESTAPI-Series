@@ -58,4 +58,40 @@ const createBook = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-export { createBook };
+const updateBook = async (req: Request, res: Response, next: NextFunction) => {
+  const { title, genre } = req.body;
+  const bookId = req.params.bookId;
+
+  const book = await bookModel.findOne({ _id: bookId });
+  if (!book) {
+    return next(createHttpError(404, "Book Not Found"));
+  }
+
+  const _req = req as AuthRequest;
+  if (book.author.toString() !== _req.userId) {
+    return createHttpError(403, "Unauthorized");
+    // return res.status(400).json({ message: "Unauthorized" });
+  }
+
+  const files = req.files as { [fieldname: string]: Express.Multer.File[] };
+  let completeCoverImage = "";
+  if (files.coverImage) {
+    const coverMimeType = files.coverImage[0].mimetype.split("/").at(-1);
+    const filename = files.coverImage[0].filename;
+    const filePath = path.resolve(
+      __dirname,
+      "../../public/data/uploads",
+      filename
+    );
+
+    completeCoverImage = `${filename}.${coverMimeType}`;
+    const uploadResult = await cloudinary.uploader.upload(filePath, {
+      filename_override: completeCoverImage,
+      folder: "book-covers",
+    });
+    completeCoverImage = uploadResult.secure_url;
+    await fs.promises.unlink(filePath);
+  }
+};
+
+export { createBook, updateBook };
